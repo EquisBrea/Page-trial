@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAC-Movie</title>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <nav>
+            <!-- logo -->
+            <div>
+                <a href="/">
+                    <span>CAC-Movies</span>
+                </a>
+            </div>
+            <!-- Hipervinculos para el menu -->
+            <ul>
+                <li><a href="#popular">Tendencias</a></li>
+                <li><a href="./templates/register.html">Registrate</a></li>
+                <li><a href="#"><span>Iniciar Sesión</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contenido -->
+    <main>
+
+        <section id="form">
+        <!-- division contenedora -->
+        <div>
+            <!-- Entrada para la pelicula -->
+            <div>
+                <label>Titulo</label>
+                <input type="text" class="input-search" name="title" id="title">
+            </div>
+             <!-- Seleccion de genero de la pelicula -->
+            <div>
+                <label for="">Genero</label>
+                <select name="genre" id="genre" class="form-select">
+                    <option value="">--Seleccione--</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Comedia">Comedia</option>
+                    <option value="Superheroes">Superheroes</option>
+                </select>
+            </div>
+            <button></button>
+        </div>
+        </section>
+        <section id="list">
+         <h2>Listados de peliculas</h2>
+         <table id="list-table-movies">
+           <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Genero</th>
+                <th>Opciones</th>
+            </tr>
+           </thead>
+             <tbody></tbody>
+         </table>
+         <br><br><br>
+         <div id="list-div-movies"></div>
+        </section>
+    
+    </main>
+    <!-- Pie -->
+    <footer>
+        <a href="">Términos y condiciones</a>
+        <a href="">Preguntas frecuentes</a>
+        <a href="">Ayuda</a>
+    </footer>
+    </body>
+    
+    </html>
