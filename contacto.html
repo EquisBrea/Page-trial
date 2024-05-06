@@ -3,19 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GRAFAS ANALYTICS-Contacto</title>
 </head>
 <body>
+    <section id="form-wrapper">
+        <h2>¿CÓMO TE PODEMOS AYUDAR?</h2>
+        <h6>Todos los campos son obligatorios</h6>
+        <form action="mailto:grafasanalytics@gmail.com" id="formContacto" method="post" enctype="text/plain" novalidate>
+            <div class="Form-control">
+                <label for="nombre"></label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Nombre">
+            </div>
+            <div class="error" id="error-name"></div>
+
+            <div class="Form-control">
+                <label for="apellido"></label>
+                <input type="text" id="apellido" name="apellido" required placeholder="Apellido">
+            </div>
+            <div class="error" id="error-lastname"></div>
+            
+            <div class="Form-control">
+                <label for="email"></label>
+                <input type="email" id="email" name="email" required placeholder="ejemplo@hotmail.com">
+            </div>
+            <div class="error" id="error-email"></div>
+
+            <div class="Form-control">
+                <select name="¿En qué podemos ayudarte?" id="¿En qué podemos ayudarte?" class="form-select">
+                    <option value>¿En qué podemos ayudarte?</option>
+                    <option value="Oportunidades de trabajo">Oportunidades de trabajo</option>
+                    <option value="Solicitudes de datos y privacidad">Solicitudes de datos y privacidad</option>
+                    <option value="Solicitudes de acceso">Solicitudes de acceso</option>
+                    <option value="Consultas de prensa y medios">Consultas de prensa y medios</option>
+                    <option value="Servicios">Servicios</option>
+                    <option value="Servicios para los clientes">Servicios para los clientes</option>
+                    <option value="Patrocinios">Patrocinios</option>
+                    <option value="Comentarios sobre el sitio web">Comentarios sobre el sitio web</option>
+                    <option value="Ninguna de las anteriores">Ninguna de las anteriores</option>
+                </select>
+            </div>
+            
+            <div class="Form-control">
+                <label for="comentarios"></label>
+                <textarea id="comentarios" name="comentarios" placeholder="Deja tu Comentario aquí!"></textarea>
+            </div>
+
+            <div class="form-terms">
+                <div class="terms">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">Acepto Términos y Condiciones</label>
+                </div>
+            </div>
+
+            <button type="submit">Enviar Mensaje</button>
+
+        </form>
+    </section>
+
+    <div class="otros-medcont">
+        <h2>Más formas de conectarse</h2>
+        <h4>Suscríbete a nnuestro boletín de noticias</h4>
+        <p>Nuestro  boletín de noticias te mantendrá informado sobre las últimas tendencias</p>
+        <h4>Síguenos en las redes sociales</h4>
+        <p>Únete a la conversación en Facebook, Instagram, LinkedIn o Twitter, o visítanos en YouTube.</p>
+        <h4>Buscar una Oficina</h4>
+        <p>Con 700 oficinas en más de 150 países, proporcionamos conocimiento local con experiencia global.</p>
+        <h4>Explorar las últimas noticias</h4>
+        <p>Manténganse al día con las últimas noticias de GRAFAS ANALYTICS y entérense de cómo estamos construyendo un mejor mundo de negocios.</p>
+        <h4>Comentarios sobre nuestros servicios</h4>
+        <p>Contáctanos si tienes una sugerencia relacionada con la ejecución de un proyecto que nuestros equipos estén llevando a cabo.</p>
+    </div>
     <header>
         <nav>
           <!-- logo -->
           <div class="barra-nav-container">
-          <div>
-              <!-- mas adelante se aplicaran estilos especificos al texto y se agregar un icono -->
-              <a href="">
-              <div class="logo logo-container"><img class="logo logo1" src="/static/img/drawing.svg" alt="" height="100"></div>
-              </a>
-          </div>
+          
           <!-- Hipervinculos para el menu -->
           <ul>
               <li>
