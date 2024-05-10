@@ -19,6 +19,14 @@ html{
 
 }
 
+*, :before, *:after {
+    box-sizing: inherit;
+}
+
+
+/* * {
+    border-style: dotted;
+} */
 /* .barra-nav-container{
     display: flex;
     height: 80px;
@@ -32,123 +40,123 @@ html{
     background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  
     background: linear-gradient(to right, #E9E4F0, #D3CCE3);  */
 body {
-    display: flexbox;
+    position: relative;
     font-family: var(--fuentesSecundaria);
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
     background: var(--degradadoCeleste);
-    height: 100vh;
-    display: flex;
+    height: 200vh;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     color: white;
 
 }
 
-.contenedor {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-.contenedor-imagenes {
-    flex-direction: column;
-}
-#content {
-    text-align: center;
-}
+
 a {
+    display: block;
     color: white;
     text-decoration: none;
-    margin: 0 10px;
-}
+    margin: 0 0px;
+    height: 100%;
+    width:100%;
+    padding: 0.5rem;
+    font-size: 1rem;
 
-*, :before, *:after {
-    box-sizing: inherit;
 }
 
 /* Estilos de la Navegacion*/
 
-/* responsive la barra de navegación */
-@media (max-width: 480px) {
-    .navegacion {
-        height: auto;
-        width: auto;
-        background-color: var(--negro);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .logo {
- 
-        min-height: 20vh;
-        min-width: 20vw;
-        height: auto;
-    }
-    main {
-        flex-direction: column;
-    }
-    .contenedor-imagenes {
-        flex-direction: column;
-    }
-} 
 
-.logo-nav{
-    height: 15vh;
-    width: 15vw;
-}
+
 .content {
     display: block;
-
 }
 .contenedor {
     height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
+
+
 .contenedor-imagenes {
     flex-direction: row;
 }
+.cuerpo-principal {
+    display: flex;
+    position: relative;
+    top: 0vh;
 
+}
+
+.fondo {
+    display: flex;
+    top: 100vh;
+    margin: 0px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover; /*cubre toda la superficie*/
+    max-height: 40vh;
+    width: 100%;
+}
+.fondo-container {
+    top:100px;
+}
 header {
-    position: fixed;
+    position: absolute;
     margin: 0;
     padding: 0;
     top: 0px;
-    height: 75px;
+    height: 40px;
     width: auto;
     z-index: 1;
 }
-
-
+input {
+    /* padding: 0.5rem; */
+    margin: 0.5rem;
+}
+label {
+    padding: 0.5rem;
+    /* margin: 0.5rem; */
+}
+li {
+    height: 100%;
+    list-style: none;
+}
+.logo-nav {
+    min-height: 8vh;
+    min-width: 8vw;
+    height: 100%;
+}
+.logo-service {
+    display: flex;
+    justify-items: center;
+}
 .logo-nav {
     display: flex;
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap;
+    display: flexbox;
     flex-direction: column;
     position: relative;
-    top: 100px;
 }
-nav {
-    margin: 0 auto;
-    padding: 0 auto;
 
-}
 .navegacion{
-    height: 15vh;
+    box-sizing: border-box;
+    height: 10vh;
+    width: auto;
     background-color: var(--azulSemiOpaco);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; 
     align-items: center;
 }
-.navegacion.div{
-    padding: 1rem;
-}
+
 .navegacion a{
     margin: 0 2rem;
     padding: 1rem;
@@ -156,53 +164,96 @@ nav {
     color: var(--blanco)
 }
 
-
 .navegacion a:hover{
     cursor: pointer;
     color: var(--rosado);
 }
-
-a {
-    padding: 0.5rem;
-    font-size: 1.2rem;
+.nav-menu-item {
+    padding: 0;
+    margin: 0;
 }
+
 
 /* Estilos del Main*/
 
-.fondo {
-    display: flex;
-    flex-wrap: wrap;
-    position:relative;
-    margin: 10;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; /*cubre toda la superficie*/
-    height: auto;
-    width: 100%;
-}
 
 .tecnologias {
     margin: auto 5;
 }
 .tecnologias h3 {
     text-align: center;
-    color: var(--negro);
     font-size: 2rem;
 }
 
 .tecnologias p {
     text-align: center;
-    color: var(--negro);
     font-size: 1.5rem;
 }
 
+.titulo {
+    padding: 1rem;
+}
+
+/* responsive de la barra de navegación */
+
+@media (max-width: 480px) {
+ 
+    .navegacion {
+       height: auto;
+       width: auto;
+       flex-direction: column;
+       justify-content: space-around;
+       align-items: center;
+       border-color: #f5cdc0;
+   } 
+   .logo-nav {
+        display: none;
+   }
+   li{
+       justify-content: center;
+       height: 120%;
+       border-color: red;
+       float: right;
+       overflow-wrap: normal;
+       height: 10px;
+       width: 100%;
+   }
+   a {
+       font-size: .5rem;
+       height: 100%;
+       width:100%;
+   }
+    .logo-nav {
+       min-height: 8vh;
+       min-width: 8vw;
+       height: auto;
+       padding: 0;
+       margin: 0;
+       height: 100%;
+       width: 100%;
+       border-color: red;
+   } 
+   main {
+       flex-direction: column;
+   }
+   .contenedor-imagenes {
+       flex-direction: column;
+   }
+   .cuerpo-principal {
+       flex: auto;
+   }
+
+} 
+/* 
 .section div{
     position: relative;
     justify-items: center;
     align-items: center;
     padding: 10px;
     margin:auto;
-}
+} */
+
+
 
 /* * {
     border-color:red;
