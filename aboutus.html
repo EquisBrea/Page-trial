@@ -1,56 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="./static/css/estilo.css">
     <title>Quiénes Somos</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #007bff, #00bfff);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-        }
-        #content {
-            text-align: center;
-        }
-        a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-    </style>
+
 </head>
+
 <body>
     <header>
         <nav>
-          <!-- logo -->
-          <div class="barra-nav-container">
-          <div>
-              <!-- mas adelante se aplicaran estilos especificos al texto y se agregar un icono -->
-              <a href="">
-              <div class="logo logo-container"><img class="logo logo1" src="/static/img/drawing.svg" alt="" height="100"></div>
-              </a>
-          </div>
-          <!-- Hipervinculos para el menu -->
-        
-      </div>
+            <!-- logo -->
+            <div class="barra-nav-container">
+                <div class="contenedor contenedor-header">
+                    <nav class="navegacion">
+                        <a href="#">Quienes somos</a>
+                        <a href="#">Servicios</a>
+                        <a id="logo-nav" href="./index.html"><img class="logo-nav" src="./static/img/drawing.svg"
+                                alt=""></a>
+                        <a href="#">Galería</a>
+                        <a href="#">Contacto</a>
+                    </nav>
+                </div>
+            </div>
         </nav>
-      </header>
-    <div id="content">
-        <h1>Quiénes Somos</h1>
-        <p>Somos una empresa dedicada a que pases los momentos mas entretenidos de tus dias...</p>
-        <div>
-            <a href="contacto.html">tendencia</a>
-            <a href="registro.html">Registrarse</a>
-            <a href="iniciar_sesion.html">Iniciar Sesión</a>
+    </header>
+    <main>
+        <div class ="fondo-container">
+            <img class="fondo" src = "static/img/img-principal.jpg"Imagen de fondo">
         </div>
-    </div>
+        <div>
+            <div>
+                <div class="tecnologias" id="tecnologias">
+                    <h3 class="seccion" id="seccion">NUESTROS SERVICIOS</h3>
+                    <p>En “Grafas Analytics”, ofrecemos una amplia gama de servicios diseñados para satisfacer las
+                        necesidades
+                        específicas de cada cliente. Algunos de nuestros servicios incluyen:</p>
+                </div>
+                <div>
+                    <div class="contenedor contenedor-imagenes">
+
+                        <div class="logo-service">
+                            <img class="servicios" src="./static/img/icons-basico.png" alt="Servicio Basico">
+                            <p>BASIC</p>
+                        </div>
+
+                        <div class="logo-service">
+                            <img class="servicios" src="./static/img/icons-estandar.png" alt="Servicio Standard">
+                            <p>STANDARD</p>
+                        </div>
+
+                        <div class="logo-service">
+                            <img class="servicios" src="./static/img/icons-premium.png" alt="Servicio Premium">
+                            <p>PREMIUM</p>
+                        </div>
+                    </div>
+                    <section>
+                        <form class="contacto" id="contacto">
+                            <legend class="titulo">Contacto</legend>
+                            <div>
+                                <label>Nombre</label>
+                                <input type="text" value="">
+                            </div>
+
+                            <div>
+                                <label>Mail</label>
+                                <input type="text" value="">
+                            </div>
+
+                            <div>
+                                <label>Asunto</label>
+                                <input type="text" value="">
+                            </div>
+
+                            <div>
+                                <label>Mensaje</label>
+                                <textarea rows="6"></textarea>
+                            </div>
+
+                            <div>
+                                <input type="submit" value="Enviar Mensaje">
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+    </main>
+
 </body>
+
 </html>

@@ -2,11 +2,13 @@
 
 :root{
     --tituloPagina: "Langosta", sans-serif;
-    --azul: #34375a;
+    --azulSemiOpaco: #a8a8ac99;
     --blanco: white;
     --rosado: #f5cdc0;
     --negro: black;
+    --degradadoCeleste:  linear-gradient(to bottom, #007bff, #00bfff);
     --fuentesSecundaria: "Bree Serif", cursive;
+    --alturaNav:13vw;
 }
 
 html{
@@ -15,13 +17,12 @@ html{
     box-sizing: border-box;
 }
 
-header {
-    position: fixed;
-    margin: 0;
-    padding: 0;
-    top: 50px;
-    height: 50px;
-}
+/* .barra-nav-container{
+    display: flex;
+    height: 80px;
+    justify-content: space-evenly;
+    align-items: center;
+} */
 
 body, html{
     margin: 0;
@@ -35,14 +36,23 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #007bff, #00bfff);
+    background: var(--degradadoCeleste);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+
 }
 
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.contenedor-imagenes {
+    flex-direction: column;
+}
 #content {
     text-align: center;
 }
@@ -62,33 +72,89 @@ a {
 @media (max-width: 480px) {
     .navegacion {
         height: auto;
+        width: auto;
         background-color: var(--negro);
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
-        padding: 3rem;
     }
     .logo {
-        height: 50;
-        justify-content: center;
+ 
+        min-height: 20vh;
+        min-width: 20vw;
+        height: auto;
+    }
+    main {
+        flex-direction: column;
+    }
+    .contenedor-imagenes {
+        flex-direction: column;
     }
 } 
 
+.logo-nav{
+    height: 15vh;
+    width: 15vw;
+}
+.content {
+    display: block;
+
+}
+.contenedor {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.contenedor-imagenes {
+    flex-direction: row;
+}
+
+header {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 0px;
+    height: 75px;
+    width: auto;
+    z-index: 1;
+}
+
+
+.logo-nav {
+    display: flex;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
+    top: 100px;
+}
+nav {
+    margin: 0 auto;
+    padding: 0 auto;
+
+}
 .navegacion{
-    height: auto;
-    background-color: var(--azul);
+    height: 15vh;
+    background-color: var(--azulSemiOpaco);
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-
-.navegacion div{
+.navegacion.div{
+    padding: 1rem;
+}
+.navegacion a{
     margin: 0 2rem;
     padding: 1rem;
     text-decoration: none;
     color: var(--blanco)
 }
+
 
 .navegacion a:hover{
     cursor: pointer;
@@ -103,14 +169,20 @@ a {
 /* Estilos del Main*/
 
 .fondo {
-    background-image: url(img/img-principal.jpg);
+    display: flex;
+    flex-wrap: wrap;
+    position:relative;
+    margin: 10;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; /*cubre toda la superficie*/
+    height: auto;
     width: 100%;
-    height: 100%;
 }
 
+.tecnologias {
+    margin: auto 5;
+}
 .tecnologias h3 {
     text-align: center;
     color: var(--negro);
@@ -122,9 +194,7 @@ a {
     color: var(--negro);
     font-size: 1.5rem;
 }
-.logo-nav {
-    height: 60px
-}
+
 .section div{
     position: relative;
     justify-items: center;
