@@ -1,4 +1,139 @@
-* {
+/* Estilos Globales*/
+
+:root{
+    --tituloPagina: "Langosta", sans-serif;
+    --azul: #34375a;
+    --blanco: white;
+    --rosado: #f5cdc0;
+    --negro: black;
+    --fuentesSecundaria: "Bree Serif", cursive;
+}
+
+html{
+    font-size: 100%;
+    font-display: var(--blanco);
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 50px;
+    height: 50px;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuentesSecundaria);
+    background: #D3CCE3;  
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3); 
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #007bff, #00bfff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#content {
+    text-align: center;
+}
+a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+*, :before, *:after {
+    box-sizing: inherit;
+}
+
+/* Estilos de la Navegacion*/
+
+/* responsive la barra de navegación */
+@media (max-width: 480px) {
+    .navegacion {
+        height: auto;
+        background-color: var(--negro);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3rem;
+    }
+    .logo {
+        height: 50;
+        justify-content: center;
+    }
+} 
+
+.navegacion{
+    height: auto;
+    background-color: var(--azul);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navegacion div{
+    margin: 0 2rem;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--blanco)
+}
+
+.navegacion a:hover{
+    cursor: pointer;
+    color: var(--rosado);
+}
+
+a {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Estilos del Main*/
+
+.fondo {
+    background-image: url(img/img-principal.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /*cubre toda la superficie*/
+    width: 100%;
+    height: 100%;
+}
+
+.tecnologias h3 {
+    text-align: center;
+    color: var(--negro);
+    font-size: 2rem;
+}
+
+.tecnologias p {
+    text-align: center;
+    color: var(--negro);
+    font-size: 1.5rem;
+}
+.logo-nav {
+    height: 60px
+}
+.section div{
+    position: relative;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+    margin:auto;
+}
+
+/* * {
     border-color:red;
     }
     
@@ -11,12 +146,6 @@
     html {
         height: 100%;
         width: 100%;
-        background: linear-gradient(
-            125deg,
-            rgb(122, 117, 17),
-            beige 23%,
-            orange
-        ) no-repeat;   
     }
     body{
         position:relative;
@@ -55,4 +184,4 @@
     }
     
     
-    
+     */
