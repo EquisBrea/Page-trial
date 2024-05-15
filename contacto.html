@@ -1,10 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GRAFAS ANALYTICS-Contacto</title>
+    <link rel="stylesheet" href="./static/css/estilo.css">
+
 </head>
+
 <body>
     <section id="form-wrapper">
         <h2>¿CÓMO TE PODEMOS AYUDAR?</h2>
@@ -75,23 +80,70 @@
     </div>
     <header>
         <nav>
-          <!-- logo -->
-          <div class="barra-nav-container">
-          
-          <!-- Hipervinculos para el menu -->
-          <ul>
-              <li>
-                  <a href="#popular">Tendencias</a></li>
-              <li>
-                  <a href="./templates/register.html">Registrate</a></li>
-  
-              <li>
-                  <!-- mas adelante se aplicaran estilos especificos al texto y se agregara un icono -->
-                  <a href="#"><span>Iniciar Sesión</span></a></li>
-          </ul>
-      </div>
         </nav>
-      </header>
-    
+    </header>
+    <div class="fondo-container">
+        <img class="fondo" src="static/img/img-principal.jpg" Imagen de fondo">
+    </div>
+<section class ="cuerpo-principal">
+    <main>
+            <div>
+                <div class="tecnologias" id="tecnologias">
+                    <h3 class="seccion" id="seccion">NUESTROS SERVICIOS</h3>
+                    <p>En <b>Grafas Analytics</b> ofrecemos una amplia gama de servicios diseñados para satisfacer las
+                        necesidades
+                        específicas de cada cliente. <br>Algunos de nuestros servicios incluyen:</p>
+                </div>
+                <div>
+                    <div class="contenedor contenedor-imagenes">
+
+                        <div class="logo-service">
+                            <img class="servicios" src="./static/img/icons-basico.png" alt="Servicio Basico">
+                            <p>BASIC</p>
+                        </div>
+
+                        <div class="logo-service">
+                            <img class="servicios" src="./static/img/icons-estandar.png" alt="Servicio Standard">
+                            <p>STANDARD</p>
+                        </div>
+
+                        <div class="logo-service">
+                            <img class="servicios" src="./static/img/icons-premium.png" alt="Servicio Premium">
+                            <p>PREMIUM</p>
+                        </div>
+                    </div>
+                    <div>
+                        <form class="contacto" id="contacto">
+                            <legend class="titulo">Contacto</legend>
+                            <div>
+                                <label>Nombre</label>
+                                <input type="text name" value="">
+                            </div>
+
+                            <div>
+                                <label>Mail</label>
+                                <input type="text mail" value="">
+                            </div>
+
+                            <div>
+                                <label>Asunto</label>
+                                <input type="text subject" value="">
+                            </div>
+
+                            <div>
+                                <label>Mensaje</label>
+                                <textarea class ="message-text"rows="6"></textarea>
+                            </div>
+
+                            <div>
+                                <input type="submit" value="Enviar Mensaje">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>   
+</main>
+</section>
 </body>
+
 </html>
