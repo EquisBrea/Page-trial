@@ -46,7 +46,7 @@ body {
     padding: 0;
     background: var(--degradadoCeleste);
     height: 200vh;
-    /* display: flex; */
+    /* display: flex;  */
     justify-content: center;
     align-items: center;
     color: white;
@@ -81,6 +81,7 @@ a {
     display: flex;
     flex-direction: row;
 }
+
 .cuerpo-principal {
     display: flex;
     position: relative;
@@ -102,7 +103,6 @@ a {
     top: 1000px;
 }
 header {
-    position: absolute;
     margin: 0;
     padding: 0;
     top: 0px;
@@ -122,30 +122,16 @@ label {
 }
 li {
     list-style: none;
-}
-
-.logo-service {
     display: flex;
-    justify-items: center;
 }
 
-
-main {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.navegacion{
-    overflow: hidden;
-}
 
 .navegacion li {
+    box-sizing: border-box;
     float: left;
-    display: block;    
     text-align: center;
-    margin: 0 2rem;
-    padding: 2rem;
+    margin: 0;
+    padding: 0;
     text-decoration: none;
     color: var(--blanco);
     overflow: hidden;
@@ -164,10 +150,7 @@ main {
     cursor: pointer;
     color: var(--rosado);
 }
-.nav-menu-item {
-    padding: 0;
-    margin: 0;
-}
+
 
 
 /* Estilos del Main*/
@@ -203,6 +186,15 @@ main {
        border-color: #f5cdc0;
    } 
 
+   .navegacion ul {
+    /* float: left; */
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: var(--blanco);
+
+   }
+
    li{
     margin: auto;
     padding: auto;
@@ -228,6 +220,7 @@ main {
         border-color: red;
         position: relative;
    } 
+
    .logo-nav {
     margin: 0;
     height: 100%;
@@ -238,16 +231,21 @@ main {
     max-width: 10vw;
     }
 
-   main {
-       flex-direction: column;
-   }
+ 
    .contenedor-imagenes {
        flex-direction: column;
    }
-   .cuerpo-principal {
-       flex: auto;
-   }
-
+   
+   /* .contenedor-en-form-contacto {
+    flex-direction: row;
+   } */
+   .nav-menu-item {
+    display: flex;
+    height: auto;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
 } 
 /* 
 .section div{
