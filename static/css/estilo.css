@@ -1,13 +1,13 @@
 /* Estilos Globales*/
 
 :root{
-    --tituloPagina: "Langosta", sans-serif;
+    --tituloPagina: "Poetsen One", sans-serif;
     --azulSemiOpaco: #a8a8ac99;
     --blanco: white;
     --rosado: #f5cdc0;
     --negro: black;
     --degradadoCeleste:  linear-gradient(to bottom, #007bff, #00bfff);
-    --fuentesSecundaria: "Bree Serif", cursive;
+    --fuentesSecundaria: "Teachers", cursive;
     --alturaNav:13vw;
 }
 
@@ -24,21 +24,8 @@ html{
 }
 
 
-/* * {
-    border-style: dotted;
-} */
-/* .barra-nav-container{
-    display: flex;
-    height: 80px;
-    justify-content: space-evenly;
-    align-items: center;
-} */
 
 
-
-    /* background: #D3CCE3;  
-    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  
-    background: linear-gradient(to right, #E9E4F0, #D3CCE3);  */
 body {
     position: relative;
     font-family: var(--fuentesSecundaria);
@@ -46,16 +33,12 @@ body {
     padding: 0;
     background: var(--degradadoCeleste);
     height: 200vh;
-    /* display: flex;  */
-    justify-content: center;
-    align-items: center;
     color: white;
-
 }
 
 
 a {
-    display: block;
+    display: flex;
     color: white;
     text-decoration: none;
     margin: 0 0px;
@@ -85,8 +68,6 @@ a {
 .cuerpo-principal {
     display: flex;
     position: relative;
-    top: 0vh;
-
 }
 
 .fondo {
@@ -103,10 +84,11 @@ a {
     top: 1000px;
 }
 header {
+    position: sticky;
     margin: 0;
-    padding: 0;
+    padding: 0.5rem;
     top: 0px;
-    height: 80px;
+    height: auto;
     width: 100%;
     z-index: 1;
     background-color: var(--azulSemiOpaco);
@@ -120,15 +102,10 @@ label {
     padding: 0.5rem;
     /* margin: 0.5rem; */
 }
-li {
-    list-style: none;
-    display: flex;
-}
-
 
 .navegacion li {
+    display: flex;
     box-sizing: border-box;
-    float: left;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -137,20 +114,36 @@ li {
     overflow: hidden;
 }
 
+.nav-menu-item {
+    padding: 0;
+    margin: 1rem;
+    margin-bottom: 0.5rem;
+}
 .logo-nav-item {
+    display: flex;
     border-style: dotted;
     border-color: red;
     max-height: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-nav {
-    height: 10px;
+    display: flex;
+    max-height: 50px;
 }
 .navegacion a:hover{
     cursor: pointer;
     color: var(--rosado);
 }
 
+.navegacion {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
 
 
 /* Estilos del Main*/
@@ -158,6 +151,7 @@ li {
 
 .tecnologias {
     margin: auto 5;
+    font: var(--tituloPagina);
 }
 .tecnologias h3 {
     text-align: center;
@@ -190,12 +184,14 @@ li {
     /* float: left; */
     margin: 0;
     padding: 0;
+    height: auto;
+    max-height: 50vh;
     text-decoration: none;
     color: var(--blanco);
 
    }
 
-   li{
+   .nav-menu-item{
     margin: auto;
     padding: auto;
        justify-content: center;
@@ -225,8 +221,8 @@ li {
     margin: 0;
     height: 100%;
     width: 100%;
-    max-height: 1vh;
-    max-width: 1vw;
+    max-height: 5vh;
+    max-width: 9vw;
     height:inherit;
     max-width: 10vw;
     }
@@ -236,6 +232,9 @@ li {
        flex-direction: column;
    }
    
+   .cuerpo-principal {
+
+   }
    /* .contenedor-en-form-contacto {
     flex-direction: row;
    } */
