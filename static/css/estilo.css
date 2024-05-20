@@ -31,7 +31,7 @@ body {
     font-family: var(--fuentesSecundaria);
     margin: 0;
     padding: 0;
-    background: var(--degradadoCeleste);
+    background: var(--azulSemiOpaco);
     height: 200vh;
     color: white;
 }
@@ -77,7 +77,7 @@ a {
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover; /*cubre toda la superficie*/
-    max-height: 30vh;
+    max-height: 70vh;
     width: 100%;
 }
 .fondo-container {
@@ -95,7 +95,7 @@ header {
 }
 
 input {
-    /* padding: 0.5rem; */
+    padding: 0.5rem;
     margin: 0.5rem;
 }
 label {
@@ -128,9 +128,15 @@ label {
     align-items: center;
 }
 
-.logo-nav {
+.logo-div {
     display: flex;
-    max-height: 50px;
+    max-height: 100px;
+    justify-items: center;
+}
+
+.logo-div img {
+    display: flex;
+    justify-content: center;
 }
 .navegacion a:hover{
     cursor: pointer;
@@ -232,6 +238,32 @@ label {
        flex-direction: column;
    }
    
+   .descripcion-container{
+    margin: 0;
+    max-width: 180%;
+    position: relative;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin:auto;
+   }
+
+   .descripcion-container h4 {
+    font-style: normal;
+    text-align: center;
+}
+
+   .estilo-aside{
+    min-width: 25%;
+    float: left;
+    width: auto;
+   }
+
+   .estilo-aside img{
+    border-radius:0%;
+   }
+
    .cuerpo-principal {
 
    }
