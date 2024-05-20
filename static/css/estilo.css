@@ -2,7 +2,8 @@
 
 :root{
     --tituloPagina: "Poetsen One", sans-serif;
-    --azulSemiOpaco: #a8a8ac99;
+    --azulSemiOpaco: #a8a8acDD;
+    --grisOpaco: #a8a8acFF;
     --blanco: white;
     --rosado: #f5cdc0;
     --negro: black;
@@ -31,8 +32,8 @@ body {
     font-family: var(--fuentesSecundaria);
     margin: 0;
     padding: 0;
-    background: var(--azulSemiOpaco);
-    height: 200vh;
+    background: var(--degradadoCeleste);
+    height: 250vh;
     color: white;
 }
 
@@ -45,12 +46,21 @@ a {
     height: 100%;
     width:100%;
     padding: 0.5rem;
-    font-size: 1rem;
-
+    font-size: 1.2rem;
 }
 
 /* Estilos de la Navegacion*/
 
+.comments {
+    display: flex;
+}
+
+.comments h4{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
 
 .content {
     display: block;
@@ -64,12 +74,29 @@ a {
     display: flex;
     flex-direction: row;
 }
+.contenedor-social-network {
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-style: dotted;
+    border-color: red;
+}
+.container-social-network{
+    display: flex;
+}
 
 .cuerpo-principal {
     display: flex;
     position: relative;
 }
-
+.error {
+    color: #903c08;
+    font-weight: 200;
+    text-shadow: var(--azulSemiOpaco);
+}
 .fondo {
     display: flex;
     top: 100vh;
@@ -83,26 +110,83 @@ a {
 .fondo-container {
     top: 1000px;
 }
+.form-wrapper {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
 header {
     position: sticky;
     margin: 0;
-    padding: 0.5rem;
+    padding-bottom: 0.5rem;
     top: 0px;
     height: auto;
     width: 100%;
     z-index: 1;
     background-color: var(--azulSemiOpaco);
+    border-bottom-left-radius: 3%;
+    border-bottom-right-radius: 3%;
+    border-style: dotted;
+    border-color: var(--grisOpaco);
+    border-width: 0.15rem;
 }
 
-input {
+.form-control {
+    display: flex;
+}
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control input {
+    height: auto;
+    width: auto;
     padding: 0.5rem;
     margin: 0.5rem;
+    justify-self: center;
 }
+.form-control {
+    padding: 0.25rem;
+    margin: 0;
+}
+.form-wrapper {
+    justify-content: center;
+}
+.icono-social-network {
+    display: flex;
+    max-width: 20px;
+    height: 20px;
+}
+
+.intro {
+    justify-items: center;
+    align-items: center;
+}
+.intro div {
+    margin: 0;
+    width: auto;
+}
+.invisible {
+padding: 0.5rem;
+}
+
 label {
     padding: 0.5rem;
     /* margin: 0.5rem; */
 }
-
+main {
+    font-family: var(--tituloPagina);
+}
+.navegacion {
+    align-items: center;
+    justify-content: center;
+}
 .navegacion li {
     display: flex;
     box-sizing: border-box;
@@ -119,6 +203,22 @@ label {
     margin: 1rem;
     margin-bottom: 0.5rem;
 }
+
+.otros-medcont {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.otros-medcont p{
+    text-justify: center;
+}
+
+.link-logo {
+    justify-content: center;
+}
+
 .logo-nav-item {
     display: flex;
     border-style: dotted;
@@ -129,15 +229,26 @@ label {
 }
 
 .logo-div {
-    display: flex;
-    max-height: 100px;
-    justify-items: center;
+ display: none;
 }
 
 .logo-div img {
     display: flex;
     justify-content: center;
 }
+
+.logo-div {
+    display: none;
+}
+
+.logo-nav {
+    height: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    max-width: 80px;
+}
+
 .navegacion a:hover{
     cursor: pointer;
     color: var(--rosado);
@@ -169,6 +280,10 @@ label {
     font-size: 1.5rem;
 }
 
+.dos p{
+    font-size: 1.25rem;
+}
+
 .titulo {
     padding: 1rem;
 }
@@ -177,6 +292,13 @@ label {
 
 @media (max-width: 480px) {
  
+    .invisible {
+        display: none;
+        margin: 0;
+        padding: 0;
+        height: 0px;
+    }
+    
     .navegacion {
        height: auto;
        width: auto;
@@ -211,7 +333,14 @@ label {
        height: 100%;
        width:100%;
    }
+   .logo-div {
+    display: flex;
+    max-height: 100px;
+    justify-items: center;
+   }
+
     .logo-nav-item {
+        display: none;
         padding: 0;
         margin: 0;
         height: 100%;
@@ -224,15 +353,13 @@ label {
    } 
 
    .logo-nav {
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    max-height: 5vh;
-    max-width: 9vw;
-    height:inherit;
-    max-width: 10vw;
+    display: none;
+    height: 0px;    
     }
 
+    .nav-menu-item {
+        display: none;
+    }
  
    .contenedor-imagenes {
        flex-direction: column;
@@ -264,9 +391,7 @@ label {
     border-radius:0%;
    }
 
-   .cuerpo-principal {
 
-   }
    /* .contenedor-en-form-contacto {
     flex-direction: row;
    } */
@@ -276,7 +401,10 @@ label {
     width: auto;
     margin: 0;
     padding: 0;
-}
+    }
+    .logo-nav-item{
+        display: none;
+    }
 } 
 /* 
 .section div{

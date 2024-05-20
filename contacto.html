@@ -5,27 +5,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GRAFAS ANALYTICS-Contacto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./static/css/estilo.css">
-
+    <title>GRAFAS ANALYTICS</title>
 </head>
 
 <body>
     <header>
-        <nav class="navegacion">
-                <ul>
+        <div>
+            <center class ="logo"><a href="./index.html" class ="link-logo"><img class="logo-div" src="./static/img/drawing.svg" alt="Grafas Analytics"></a></center>
+            <nav class="navegacion">
                 <li><a class="nav-menu-item" href="./index.html">Inicio</a></li>
                 <li><a class="nav-menu-item" href="./aboutus.html">Quienes somos</a></li>
+                <li class="invisible"><a id="nav-menu-item logo-nav" href="./index.html"><img class="logo-nav" src="./static/img/drawing.svg" class="nav-menu-item" alt=""></a></li>
                 <li><a class="nav-menu-item" href="./servicios.html">Servicios</a></li>
-                <li><a class="nav-menu-item" href="#">Contacto</a></li>
-                </ul>
-                <a class="logo-nav-item" href="./index.html"><img class="logo-nav" src="./static/img/logoGrafas.ico" class="nav-menu-item" alt=""></a></li>
-        </nav>
-</header>
-<div class="fondo-container">
-    <img class="fondo" src="static/img/img-principal.jpg" Imagen de fondo">
-</div>
-    <section id="form-wrapper">
+                <li><a class="nav-menu-item" href="./contacto.html">Contacto</a></li>
+            </nav>
+        </div>
+    </header>
+
+    <section class="form-wrapper" id="form-wrapper">
         <h2>¿CÓMO TE PODEMOS AYUDAR?</h2>
         <div class="contenedor contenedor-imagenes contenedor-en-form-contacto">
 
@@ -44,28 +45,30 @@
                 <p>PREMIUM</p>
             </div>
         </div>
-        <h6>Todos los campos son obligatorios</h6>
-        <form action="mailto:grafasanalytics@gmail.com" id="formContacto" method="post" enctype="text/plain" novalidate>
-            <div class="Form-control">
-                <label for="nombre"></label>
-                <input type="text" id="nombre" name="nombre" required placeholder="Nombre">
+        <h6>*Todos los campos son obligatorios</h6>
+
+        
+        <form action="mailto:grafasanalytics@gmail.com" class = "form-contacto" id="formContacto" method="post">
+            <div class="form-control">
+                <label for="nombre">Nombre</label><br>
+                <input type="text" id="nombre" name="nombre"  placeholder="Nombre">
             </div>
             <div class="error" id="error-name"></div>
 
-            <div class="Form-control">
-                <label for="apellido"></label>
-                <input type="text" id="apellido" name="apellido" required placeholder="Apellido">
+            <div class="form-control">
+                <label for="apellido">Apellido</label><br>
+                <input type="text" id="apellido" name="apellido"  placeholder="Apellido">
             </div>
             <div class="error" id="error-lastname"></div>
             
-            <div class="Form-control">
-                <label for="email"></label>
-                <input type="email" id="email" name="email" required placeholder="ejemplo@hotmail.com">
+            <div class="form-control">
+                <label for="email">Correo <br> electrónico</label><br>
+                <input id="email" name="email"  placeholder="ejemplo@hotmail.com">
             </div>
             <div class="error" id="error-email"></div>
 
-            <div class="Form-control">
-                <select name="¿En qué podemos ayudarte?" id="¿En qué podemos ayudarte?" class="form-select">
+            <div class="form-control">
+                <select name="offered-service" id="offered-service" class="form-select"><br>
                     <option value>¿En qué podemos ayudarte?</option>
                     <option value="Oportunidades de trabajo">Oportunidades de trabajo</option>
                     <option value="Solicitudes de datos y privacidad">Solicitudes de datos y privacidad</option>
@@ -77,23 +80,28 @@
                     <option value="Comentarios sobre el sitio web">Comentarios sobre el sitio web</option>
                     <option value="Ninguna de las anteriores">Ninguna de las anteriores</option>
                 </select>
+
             </div>
             
-            <div class="Form-control">
-                <label for="comentarios"></label>
+            <div class="form-control">
+                <label for="comentarios"></label><br>
                 <textarea id="comentarios" name="comentarios" placeholder="Deja tu Comentario aquí!"></textarea>
             </div>
-
-            <div class="form-terms">
+            
+            <div class="form-control">
                 <div class="terms">
                     <input type="checkbox" id="terms">
                     <label for="terms">Acepto Términos y Condiciones</label>
                 </div>
             </div>
+            <div class="error" id="error-terms"></div>
 
             <button type="submit">Enviar Mensaje</button>
+            
+            <div class="error-final" id="error-final"></div>
 
         </form>
+        <script src="./static/script/form-validation.js"></script>
     </section>
 
     <div class="otros-medcont">
@@ -101,14 +109,21 @@
         <h4>Suscríbete a nnuestro boletín de noticias</h4>
         <p>Nuestro  boletín de noticias te mantendrá informado sobre las últimas tendencias</p>
         <h4>Síguenos en las redes sociales</h4>
-        <p>Únete a la conversación en Facebook, Instagram, LinkedIn o Twitter, o visítanos en YouTube.</p>
-        <h4>Buscar una Oficina</h4>
-        <p>Con 700 oficinas en más de 150 países, proporcionamos conocimiento local con experiencia global.</p>
-        <h4>Explorar las últimas noticias</h4>
-        <p>Manténganse al día con las últimas noticias de GRAFAS ANALYTICS y entérense de cómo estamos construyendo un mejor mundo de negocios.</p>
-        <h4>Comentarios sobre nuestros servicios</h4>
-        <p>Contáctanos si tienes una sugerencia relacionada con la ejecución de un proyecto que nuestros equipos estén llevando a cabo.</p>
+
+        <div class = "container-social-network">
+            <a class ="container-icon-social-network" href="https//facebook.com"><img class="icono-social-network" src="./static/img/facebook-logo.png" alt="logo facebook"></a>
+            <a class ="container-icon-social-network" href="https//instagram.com"><img class="icono-social-network" src="./static/img/instagram-logo.png" alt="logo facebook"></a>
+            <a class ="container-icon-social-network" href="https//linkedin.com"><img class="icono-social-network" src="./static/img/linkedin-logo.png" alt="logo facebook"></a>
+            <a class ="container-icon-social-network" href="https//twitter.com"><img class="icono-social-network" src="./static/img/facebook-logo.png" alt="logo facebook"></a>
+        </div>
+
+        <h4>Explora las últimas noticias</h4>
+        <p>Manténganse al día con las últimas noticias de GRAFAS ANALYTICS <br>y entérense de cómo estamos construyendo un mejor mundo de negocios.</p>
     </div>
+    <section class="comments"">
+        <h4>Comentarios sobre nuestros servicios</h4>
+        <div class="comment-container"></div>
+    </section>
 </body>
 
 </html>
