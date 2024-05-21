@@ -5,11 +5,14 @@ const inputEmail=document.getElementById("email");
 const offeredeService=document.getElementById("offered-service");
 const comments=document.getElementById("comentarios");
 const terminos= document.getElementById("terms");
+
 const errorName=document.getElementById("error-name");
 const errorLastname=document.getElementById("error-lastname");
 const errorEmail = document.getElementById("error-email");
+const errorComboBox = document.getElementById("error-combo-box");
 const formError=document.getElementById("error-final");
 const errorTerminos=document.getElementById("error-terms");
+const errorText =document.querySelector(".error");
 
 const errorTemplate ="Error - "
 console.log("Hello World")
@@ -41,21 +44,28 @@ formRegister.addEventListener("submit" , e=>{
         errorEmail.innerHTML = warning
         warning = "";
     }
-    if(offeredeService.value=="default"){
+    if(offeredeService.value.default){
         warning+=`Elija una opcion <br>`
         valor=true;
+        errorComboBox.innerHTML= warning;
+        warning ="";
     }
 
     if (!terminos.checked) {
         warning+= `Debe aceptar nuestros términos y condiciones`;
         valor=true;
         errorTerminos.innerHTML = warning; 
-        warning = ""
+        warning = "";
     }
-    
+
     if(valor){
         formError.innerHTML= warning + `Revise los campos indicados`;
     }else{
+        errorName.innerHTML = warning;
+        errorLastname.innerHTML = warning;
+        errorEmail.innerHTML = warning;
+        errorComboBox.innerHTML=warning;
+        errorTerminos.innerHTML=warning;
         formError.innerHTML="Enviado";
         formRegister.reset();
     }
