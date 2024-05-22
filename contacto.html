@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,48 +10,86 @@
 </head>
 
 <body>
+    <header>
+        <div>
+            <center class ="logo"><a href="./index.html" class ="link-logo"><img class="logo-div" src="./static/img/drawing.svg" alt="Grafas Analytics"></a></center>
+            <nav class="navegacion">
+                <li><a class="nav-menu-item" href="./index.html">Inicio</a></li>
+                <li><a class="nav-menu-item" href="./aboutus.html">Quienes somos</a></li>
+                <li class="invisible"><a id="nav-menu-item logo-nav" href="./index.html"><img class="logo-nav" src="./static/img/drawing.svg" class="nav-menu-item" alt=""></a></li>
+                <li><a class="nav-menu-item" href="./servicios.html">Servicios</a></li>
+                <li><a class="nav-menu-item" href="./contacto.html">Contacto</a></li>
+            </nav>
+        </div>
+    </header>
+<div class="fondo-container">
+    <img class="fondo" src="static/img/img-principal.jpg" Imagen de fondo">
+</div>
     <section id="form-wrapper">
-        <h2>¿CÓMO TE PODEMOS AYUDAR?</h2>
-        <h6>Todos los campos son obligatorios</h6>
-        <form action="mailto:grafasanalytics@gmail.com" id="formContacto" method="post" enctype="text/plain" novalidate>
-            <div class="Form-control">
+        <h1 class="planes">NUESTROS PLANES</h1>
+        <div class="contenedor contenedor-imagenes contenedor-en-form-contacto">
+
+            <div class="logo-service">
+                <img class="servicios" src="./static/img/icons-basico.png" alt="Servicio Basico">
+                <p>BASIC</p>
+            </div>
+    
+            <div class="logo-service">
+                <img class="servicios" src="./static/img/icons-estandar.png" alt="Servicio Standard">
+                <p>STANDARD</p>
+            </div>
+    
+            <div class="logo-service">
+                <img class="servicios" src="./static/img/icons-premium.png" alt="Servicio Premium">
+                <p>PREMIUM</p>
+            </div>
+        </div> <br>
+        <div class="form-contact">
+            <h2 class="sub-cont">¿EN QUÉ PODEMOS AYUDARTE?</h2><br>
+            <h5>*Todos los campos son obligatorios</h5>
+            <form action="mailto:grafasanalytics@gmail.com" id="formContacto" method="post" enctype="text/plain" novalidate>
+                
+                <div class="campos-select">
+
+                    <select name="¿En qué podemos ayudarte?" id="¿En qué podemos ayudarte?" class="campos-select">
+
+                        <option value>¿En qué podemos ayudarte?</option>
+                        <option value="Oportunidades de trabajo">Oportunidades de trabajo</option>
+                        <option value="Solicitudes de datos y privacidad">Solicitudes de datos y privacidad</option>
+                        <option value="Solicitudes de acceso">Solicitudes de acceso</option>
+                        <option value="Consultas de prensa y medios">Consultas de prensa y medios</option>
+                        <option value="Servicios">Servicios</option>
+                        <option value="Servicios para los clientes">Servicios para los clientes</option>
+                        <option value="Patrocinios">Patrocinios</option>
+                        <option value="Comentarios sobre el sitio web">Comentarios sobre el sitio web</option>
+                        <option value="Ninguna de las anteriores">Ninguna de las anteriores</option>
+                    </select>
+                </div>
+                
+            <div class="campos">
                 <label for="nombre"></label>
                 <input type="text" id="nombre" name="nombre" required placeholder="Nombre">
             </div>
             <div class="error" id="error-name"></div>
 
-            <div class="Form-control">
+            <div class="campos">
                 <label for="apellido"></label>
                 <input type="text" id="apellido" name="apellido" required placeholder="Apellido">
             </div>
             <div class="error" id="error-lastname"></div>
             
-            <div class="Form-control">
+            <div class="campos">
                 <label for="email"></label>
                 <input type="email" id="email" name="email" required placeholder="ejemplo@hotmail.com">
             </div>
             <div class="error" id="error-email"></div>
 
-            <div class="Form-control">
-                <select name="¿En qué podemos ayudarte?" id="¿En qué podemos ayudarte?" class="form-select">
-                    <option value>¿En qué podemos ayudarte?</option>
-                    <option value="Oportunidades de trabajo">Oportunidades de trabajo</option>
-                    <option value="Solicitudes de datos y privacidad">Solicitudes de datos y privacidad</option>
-                    <option value="Solicitudes de acceso">Solicitudes de acceso</option>
-                    <option value="Consultas de prensa y medios">Consultas de prensa y medios</option>
-                    <option value="Servicios">Servicios</option>
-                    <option value="Servicios para los clientes">Servicios para los clientes</option>
-                    <option value="Patrocinios">Patrocinios</option>
-                    <option value="Comentarios sobre el sitio web">Comentarios sobre el sitio web</option>
-                    <option value="Ninguna de las anteriores">Ninguna de las anteriores</option>
-                </select>
-            </div>
             
-            <div class="Form-control">
+            <div class="campos">
                 <label for="comentarios"></label>
                 <textarea id="comentarios" name="comentarios" placeholder="Deja tu Comentario aquí!"></textarea>
             </div>
-
+        
             <div class="form-terms">
                 <div class="terms">
                     <input type="checkbox" id="terms">
@@ -61,89 +98,49 @@
             </div>
 
             <button type="submit">Enviar Mensaje</button>
-
-        </form>
+            </form>
+        </div>
     </section>
 
     <div class="otros-medcont">
-        <h2>Más formas de conectarse</h2>
-        <h4>Suscríbete a nnuestro boletín de noticias</h4>
-        <p>Nuestro  boletín de noticias te mantendrá informado sobre las últimas tendencias</p>
+        <h2>Más formas de conectarse</h2><br>
+        <h4>Suscríbete a nuestro boletín de noticias</h4>
+        <p>Nuestro  boletín de noticias te mantendrá informado sobre las últimas tendencias</p><br>
         <h4>Síguenos en las redes sociales</h4>
-        <p>Únete a la conversación en Facebook, Instagram, LinkedIn o Twitter, o visítanos en YouTube.</p>
+        <p>Únete a la conversación en Facebook, Instagram, LinkedIn o Twitter, o visítanos en YouTube.</p><br>
         <h4>Buscar una Oficina</h4>
-        <p>Con 700 oficinas en más de 150 países, proporcionamos conocimiento local con experiencia global.</p>
+        <p>Con 700 oficinas en más de 150 países, proporcionamos conocimiento local con experiencia global.</p><br>
         <h4>Explorar las últimas noticias</h4>
-        <p>Manténganse al día con las últimas noticias de GRAFAS ANALYTICS y entérense de cómo estamos construyendo un mejor mundo de negocios.</p>
+        <p>Manténganse al día con las últimas noticias de GRAFAS ANALYTICS y entérense de cómo estamos construyendo un mejor mundo de negocios.</p><br>
         <h4>Comentarios sobre nuestros servicios</h4>
-        <p>Contáctanos si tienes una sugerencia relacionada con la ejecución de un proyecto que nuestros equipos estén llevando a cabo.</p>
+        <p>Contáctanos si tienes una sugerencia relacionada con la ejecución de un proyecto que nuestros equipos estén llevando a cabo.</p><br>
     </div>
-    <header>
-        <nav>
-        </nav>
-    </header>
-    <div class="fondo-container">
-        <img class="fondo" src="static/img/img-principal.jpg" Imagen de fondo">
+    <h3>Nuestra ubicación</h3>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.2990753998392!2d-65.20638332563635!3d-26.83043828976911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c106f2afc99%3A0xe97bef14f2ad881a!2sPlaza%20Independencia!5e0!3m2!1ses-419!2sar!4v1715735943802!5m2!1ses-419!2sar" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-<section class ="cuerpo-principal">
-    <main>
-            <div>
-                <div class="tecnologias" id="tecnologias">
-                    <h3 class="seccion" id="seccion">NUESTROS SERVICIOS</h3>
-                    <p>En <b>Grafas Analytics</b> ofrecemos una amplia gama de servicios diseñados para satisfacer las
-                        necesidades
-                        específicas de cada cliente. <br>Algunos de nuestros servicios incluyen:</p>
-                </div>
-                <div>
-                    <div class="contenedor contenedor-imagenes">
+    <h4 class="redes">Síguenos en las redes sociales</h4>
 
-                        <div class="logo-service">
-                            <img class="servicios" src="./static/img/icons-basico.png" alt="Servicio Basico">
-                            <p>BASIC</p>
-                        </div>
+    <div class = "container-social-network">
+        <a class ="container-icon-social-network" href="https://facebook.com"><img class="icono-social-network" src="./static/img/facebook-logo.png" alt="logo facebook"></a>
+        <a class ="container-icon-social-network" href="https://instagram.com"><img class="icono-social-network" src="./static/img/instagram-logo.png" alt="logo facebook"></a>
+        <a class ="container-icon-social-network" href="https://linkedin.com"><img class="icono-social-network" src="./static/img/linkedin-logo.png" alt="logo facebook"></a>
+        <a class ="container-icon-social-network" href="https://twitter.com"><img class="icono-social-network" src="./static/img/x-logo.png" alt="logo facebook"></a>
+    </div>
 
-                        <div class="logo-service">
-                            <img class="servicios" src="./static/img/icons-estandar.png" alt="Servicio Standard">
-                            <p>STANDARD</p>
-                        </div>
-
-                        <div class="logo-service">
-                            <img class="servicios" src="./static/img/icons-premium.png" alt="Servicio Premium">
-                            <p>PREMIUM</p>
-                        </div>
-                    </div>
-                    <div>
-                        <form class="contacto" id="contacto">
-                            <legend class="titulo">Contacto</legend>
-                            <div>
-                                <label>Nombre</label>
-                                <input type="text name" value="">
-                            </div>
-
-                            <div>
-                                <label>Mail</label>
-                                <input type="text mail" value="">
-                            </div>
-
-                            <div>
-                                <label>Asunto</label>
-                                <input type="text subject" value="">
-                            </div>
-
-                            <div>
-                                <label>Mensaje</label>
-                                <textarea class ="message-text"rows="6"></textarea>
-                            </div>
-
-                            <div>
-                                <input type="submit" value="Enviar Mensaje">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>   
-</main>
-</section>
+    
 </body>
 
+<footer>
+    <div>
+        <center class ="logo"><a href="./index.html" class ="link-logo"><img class="logo-div" src="./static/img/drawing.svg" alt="Grafas Analytics"></a></center>
+         <nav class="navegacion">
+            <li><a class="nav-menu-item" href="./index.html">Inicio</a></li>
+            <li><a class="nav-menu-item" href="./aboutus.html">Quienes somos</a></li>
+            <li class="invisible"><a id="nav-menu-item logo-nav" href="./index.html"><img class="logo-nav" src="./static/img/drawing.svg" class="nav-menu-item" alt=""></a></li>
+            <li><a class="nav-menu-item" href="./servicios.html">Servicios</a></li>
+            <li><a class="nav-menu-item" href="./contacto.html">Contacto</a></li>
+        </nav>
+    </div>
+</footer>
 </html>
