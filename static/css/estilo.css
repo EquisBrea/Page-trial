@@ -1,5 +1,3 @@
-/* Estilos Globales*/
-
 :root{
     --tituloPagina: "Poetsen One", sans-serif;
     --azulSemiOpaco: #a8a8acDD;
@@ -24,6 +22,7 @@ html{
     box-sizing: inherit;
 }
 
+
 @keyframes display-rotation {
     0%{
         opacity: 0;
@@ -41,6 +40,7 @@ html{
     opacity: 0;
     }
 }
+
 
 
 body {
@@ -178,6 +178,7 @@ header {
     padding: 0.5rem;
     margin: 0.5rem;
     justify-self: center;
+
 }
 .form-control {
     padding: 0.25rem;
@@ -186,6 +187,7 @@ header {
 .form-wrapper {
     justify-content: center;
 }
+
 .icono-social-network {
     display: flex;
     max-width: 20px;
@@ -281,6 +283,16 @@ main {
     cursor: pointer;
     color: var(--rosado);
 }
+
+
+.navegacion {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
 
 .navegacion {
     height: auto;
@@ -466,6 +478,90 @@ padding: 50px;
         display: none;
     }
 } 
+
+/* Estilos del contenedor del formulario */
+.form-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #887878;
+    margin: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Estilos del formulario */
+form {
+    background-color: #a399999a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 800%;
+    max-width: 400px;
+}
+
+/* Estilos de los elementos del formulario */
+form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #913b3b;
+    font-size: 14px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #502d91;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #26243a;
+}
+
+form textarea {
+    resize: none;
+    height: 100px;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4b2d85;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #61a117;
+}
+
+.sub-cont {
+    text-align: center;
+    font-size: 30px;
+}
+
+.planes {
+    text-align: center;
+    font-size: 50px;
+}
+
+.terms label {
+    color: #d8d0e7;
+}
+
+.redes {
+    text-align: center;
+    font-size: 30px;
+}
+   
 /* 
 .section div{
     position: relative;
