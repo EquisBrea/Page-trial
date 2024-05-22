@@ -1,8 +1,13 @@
+const root = document.documentElement;
+const styleGeneral = getComputedStyle(root);
+const colorExito = styleGeneral.getPropertyValue('--verdeclaro');
+const rojoError =styleGeneral.getPropertyValue('--rojoerror');
+
 const formRegister=document.getElementById("formContacto")
 const inputNombre=document.getElementById("nombre");
 const inputApellido=document.getElementById("apellido");
 const inputEmail=document.getElementById("email");
-const offeredeService=document.getElementById("offered-service");
+const offeredService=document.getElementById("offered-service");
 const comments=document.getElementById("comentarios");
 const terminos= document.getElementById("terms");
 
@@ -15,7 +20,7 @@ const errorTerminos=document.getElementById("error-terms");
 const errorText =document.querySelector(".error");
 
 const errorTemplate ="Error - "
-console.log("Hello World")
+window.alert("Hola");
 
 formRegister.addEventListener("submit" , e=>{
     e.preventDefault();
@@ -44,7 +49,7 @@ formRegister.addEventListener("submit" , e=>{
         errorEmail.innerHTML = warning
         warning = "";
     }
-    if(offeredeService.value.default){
+    if(offeredService.value== "default"){
         warning+=`Elija una opcion <br>`
         valor=true;
         errorComboBox.innerHTML= warning;
@@ -59,14 +64,20 @@ formRegister.addEventListener("submit" , e=>{
     }
 
     if(valor){
+        formError.style.color = rojoError;
         formError.innerHTML= warning + `Revise los campos indicados`;
+        formRegister.reset();
     }else{
         errorName.innerHTML = warning;
         errorLastname.innerHTML = warning;
         errorEmail.innerHTML = warning;
         errorComboBox.innerHTML=warning;
         errorTerminos.innerHTML=warning;
+        
+        formError.style.color = colorExito;
+
         formError.innerHTML="Enviado";
+
         formRegister.reset();
     }
     })

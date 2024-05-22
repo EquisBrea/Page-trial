@@ -29,7 +29,7 @@
     <img class="fondo" src="static/img/img-principal.jpg" Imagen de fondo">
 </div>
     <section id="form-wrapper">
-        <h1 class="planes">NUESTROS PLANES</h1>
+        <h1 class="planes"> </h1>
 
         <div class="contenedor contenedor-imagenes contenedor-en-form-contacto">
 
@@ -49,16 +49,15 @@
             </div>
 
         </div> <br>
-        <div class="form-contact">
+        <div class="form-wrapper">
             <h2 class="sub-cont">¿EN QUÉ PODEMOS AYUDARTE?</h2><br>
             <h5>*Todos los campos son obligatorios</h5>
-            <form action="mailto:grafasanalytics@gmail.com" id="formContacto" method="post" enctype="text/plain" novalidate>
+
+            <form action="mailto:grafasanalytics@gmail.com" class ="formContacto" id="formContacto" method="post">
                 
                 <div class="campos-select">
-
-                    <select name="¿En qué podemos ayudarte?" id="¿En qué podemos ayudarte?" class="campos-select">
-
-                        <option value>¿En qué podemos ayudarte?</option>
+                    <select name="¿En qué podemos ayudarte?" id="offered-service" class="campos-select">
+                        <option value="default">¿En qué podemos ayudarte?</option>
                         <option value="Oportunidades de trabajo">Oportunidades de trabajo</option>
                         <option value="Solicitudes de datos y privacidad">Solicitudes de datos y privacidad</option>
                         <option value="Solicitudes de acceso">Solicitudes de acceso</option>
@@ -70,22 +69,24 @@
                         <option value="Ninguna de las anteriores">Ninguna de las anteriores</option>
                     </select>
                 </div>
+                <div class="error" id="error-combo-box"></div>
+
                 
             <div class="campos">
                 <label for="nombre"></label>
-                <input type="text" id="nombre" name="nombre" required placeholder="Nombre">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre">
             </div>
             <div class="error" id="error-name"></div>
 
             <div class="campos">
                 <label for="apellido"></label>
-                <input type="text" id="apellido" name="apellido" required placeholder="Apellido">
+                <input type="text" id="apellido" name="apellido"  placeholder="Apellido">
             </div>
             <div class="error" id="error-lastname"></div>
             
             <div class="campos">
                 <label for="email"></label>
-                <input type="email" id="email" name="email" required placeholder="ejemplo@hotmail.com">
+                <input type="email" id="email" name="email"  placeholder="ejemplo@hotmail.com">
             </div>
             <div class="error" id="error-email"></div>
 
@@ -96,47 +97,57 @@
             </div>
         
             <div class="form-terms">
-
                 <div class="terms">
                     <input type="checkbox" id="terms">
-                    <label for="terms">Acepto Términos y Condiciones</label>
+                    <label class ="label-terms" for="terms">Acepto Términos y Condiciones                    <div class="error" id="error-terms"></div>
+                    </label>
+                    <div class="error" id="error-terms"></div>
                 </div>
             </div>
-            <div class="error" id="error-terms"></div>
+
 
             <button type="submit">Enviar Mensaje</button>
-
+            <div class="error error-final" id="error-final"></div>
             </form>
-        </div>
 
+
+            <script src="./static/script/form-validation.js"></script>
+        </div>
     </section>
 
-    <div class="otros-medcont">
-        <h2>Más formas de conectarse</h2><br>
-        <h4>Suscríbete a nuestro boletín de noticias</h4>
-        <p>Nuestro  boletín de noticias te mantendrá informado sobre las últimas tendencias</p><br>
-        <h4>Síguenos en las redes sociales</h4>
+        <div class="otros-medcont">
+            <h2>Más formas de conectarse</h2>
+            <h4>Suscríbete a nnuestro boletín de noticias</h4>
+            <p>Nuestro  boletín de noticias te mantendrá informado sobre las últimas tendencias</p>
 
-        <p>Únete a la conversación en Facebook, Instagram, LinkedIn o Twitter, o visítanos en YouTube.</p><br>
-        <h4>Buscar una Oficina</h4>
-        <p>Con 700 oficinas en más de 150 países, proporcionamos conocimiento local con experiencia global.</p><br>
-        <h4>Explorar las últimas noticias</h4>
-        <p>Manténganse al día con las últimas noticias de GRAFAS ANALYTICS y entérense de cómo estamos construyendo un mejor mundo de negocios.</p><br>
-        <h4>Comentarios sobre nuestros servicios</h4>
-        <p>Contáctanos si tienes una sugerencia relacionada con la ejecución de un proyecto que nuestros equipos estén llevando a cabo.</p><br>
+            <h4>Explore las últimas noticias</h4>
+            <p>Manténgase al día con las últimas noticias de GRAFAS ANALYTICS <br>y entérense de cómo estamos construyendo un mejor mundo de negocios.</p>
+            <h4>Buscar una Oficina</h4>
+            <p>Con 700 oficinas en más de 150 países, proporcionamos conocimiento local con experiencia global.</p><br>
+            <h4>Explorar las últimas noticias</h4>
+            <p>Manténganse al día con las últimas noticias de GRAFAS ANALYTICS y entérense de cómo estamos construyendo un mejor mundo de negocios.</p><br>
+            <h4>Comentarios sobre nuestros servicios</h4>
+            <p>Contáctanos si tienes una sugerencia relacionada con la ejecución de un proyecto que nuestros equipos estén llevando a cabo.</p><br>
+        
+            <h4 class = "redes">Síguenos en las redes sociales</h4>
+    
+            <div class = "container-social-network">
+                <a class ="container-icon-social-network" href="https://facebook.com"><img class="icono-social-network" src="./static/img/facebook-logo.png" alt="logo facebook"></a>
+                <a class ="container-icon-social-network" href="https://instagram.com"><img class="icono-social-network" src="./static/img/instagram-logo.png" alt="logo facebook"></a>
+                <a class ="container-icon-social-network" href="https://linkedin.com"><img class="icono-social-network" src="./static/img/linkedin-logo.png" alt="logo facebook"></a>
+                <a class ="container-icon-social-network" href="https://twitter.com"><img class="icono-social-network" src="./static/img/x-logo.png" alt="logo facebook"></a>
+            </div>
+
+        </div>
+        
     </div>
     <h3>Nuestra ubicación</h3>
     <div class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.2990753998392!2d-65.20638332563635!3d-26.83043828976911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c106f2afc99%3A0xe97bef14f2ad881a!2sPlaza%20Independencia!5e0!3m2!1ses-419!2sar!4v1715735943802!5m2!1ses-419!2sar" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-    <h4 class="redes">Síguenos en las redes sociales</h4>
 
-    <div class = "container-social-network">
-        <a class ="container-icon-social-network" href="https://facebook.com"><img class="icono-social-network" src="./static/img/facebook-logo.png" alt="logo facebook"></a>
-        <a class ="container-icon-social-network" href="https://instagram.com"><img class="icono-social-network" src="./static/img/instagram-logo.png" alt="logo facebook"></a>
-        <a class ="container-icon-social-network" href="https://linkedin.com"><img class="icono-social-network" src="./static/img/linkedin-logo.png" alt="logo facebook"></a>
-        <a class ="container-icon-social-network" href="https://twitter.com"><img class="icono-social-network" src="./static/img/x-logo.png" alt="logo facebook"></a>
-    </div>
+
+   
 
     
 </body>
