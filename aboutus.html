@@ -8,79 +8,49 @@
     <link rel="stylesheet" href="./static/css/estilo.css">
     <title>Quiénes Somos</title>
 
-
 </head>
 
 <body>
     <header>
-                <nav class="navegacion">
-                    <li><a class="nav-menu-item" href="./index.html">Inicio</a></li>
-                    <li><a class="nav-menu-item" href="./aboutus.html">Quienes somos</a></li>
-                    <li><a class="logo-nav-item" href="./index.html"><img class="logo-nav" src="./static/img/logoGrafas.ico" class="nav-menu-item" alt=""></a></li>
-                    <li><a class="nav-menu-item" href="./servicios.html">Servicios</a></li>
-                    <li><a class="nav-menu-item" href="#">Contacto</a></li>
-                </nav>
+        <div class="logo">
+            <center><img class="logo-div" src="./static/img/drawing.svg" alt="Grafas Analytics"></center>
+            <nav class="navegacion">
+                <li><a class="nav-menu-item" href="./index.html">Inicio</a></li>
+                <li><a class="nav-menu-item" href="./aboutus.html">Quienes somos</a></li>
+                <!-- <a id="nav-menu-item logo-nav" href="./index.html"><img class="logo-nav" src="./static/img/drawing.svg" class="nav-menu-item" alt=""></a> -->
+                <li><a class="nav-menu-item" href="./servicios.html">Servicios</a></li>
+                <li><a class="nav-menu-item" href="./contacto.html">Contacto</a></li>
+            </nav>
+        </div>
     </header>
+
+    
+<!--<section class ="cuerpo-principal">-->
+<main>
     <div class="fondo-container">
-        <img class="fondo" src="static/img/img-principal.jpg" Imagen de fondo">
+        <img class="fondo" src="static/img/img-principal.jpg" alt="">
     </div>
-<section class ="cuerpo-principal">
-    <main>
-            <div>
-                <div class="tecnologias" id="tecnologias">
-                    <h3 class="seccion" id="seccion">NUESTROS SERVICIOS</h3>
-                    <p>Somos un equipo de profesionales de las Ciencias de la Información, abocados a la creación de resolución de problemas a medida de nuestros clientes <br>Algunos de nuestros servicios incluyen:</p>
-                </div>
-                <div>
-                    <div class="contenedor contenedor-imagenes">
-
-                        <div class="logo-service">
-                            <img class="servicios" src="./static/img/icons-basico.png" alt="Servicio Basico">
-                            <p>BASIC</p>
-                        </div>
-
-                        <div class="logo-service">
-                            <img class="servicios" src="./static/img/icons-estandar.png" alt="Servicio Standard">
-                            <p>STANDARD</p>
-                        </div>
-
-                        <div class="logo-service">
-                            <img class="servicios" src="./static/img/icons-premium.png" alt="Servicio Premium">
-                            <p>PREMIUM</p>
-                        </div>
-                    </div>
-                    <div>
-                        <form class="contacto" id="contacto">
-                            <legend class="titulo">Contacto</legend>
-                            <div>
-                                <label>Nombre</label>
-                                <input type="text name" value="">
-                            </div>
-
-                            <div>
-                                <label>Mail</label>
-                                <input type="text mail" value="">
-                            </div>
-
-                            <div>
-                                <label>Asunto</label>
-                                <input type="text subject" value="">
-                            </div>
-
-                            <div>
-                                <label>Mensaje</label>
-                                <textarea class ="message-text"rows="6"></textarea>
-                            </div>
-
-                            <div>
-                                <input type="submit" value="Enviar Mensaje">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>   
+    <div class="descripcion-principal">
+        <section class="descripcion-secciones">
+            <h4>QUIENES SOMOS</h4>
+            <p>En “Grafas Analytics”, somos un equipo de profesionales técnicos apasionados por el mundo de los datos. Nos especializamos en proporcionar servicios de consultoría y análisis de datos a empresas privadas y públicas, con el objetivo de contribuir significativamente en la toma de decisiones estratégicas.</p>
+        </section>
+        <section class="descripcion-secciones">
+            <h4>NUESTRA PASION POR LOS DATOS</h4>
+            <p>Desde el análisis estadístico hasta la implementación de soluciones de inteligencia artificial, nuestra pasión por los datos impulsa cada aspecto de nuestro trabajo. Creemos firmemente en el poder transformador de la información y nos esforzamos por convertir datos en ideas claras y acciones concretas para nuestros clientes.</p>
+        </section>
+        <section class="descripcion-secciones">
+            <h4>NUESTRO COMPROMISO</h4>
+            <p>Nuestro compromiso con la excelencia y la satisfacción del cliente nos impulsa a trabajar incansablemente para superar las expectativas en cada proyecto. Nos esforzamos por establecer relaciones sólidas y de confianza con nuestros clientes, colaborando estrechamente para entender sus necesidades y proporcionar soluciones personalizadas y efectivas.</p>
+        </section>
+        <aside class="estilo-aside">
+            <img src="./static/img/foto_salo.jpg" width="75px" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </aside>
+    </div>
+           
 </main>
-</section>
 </body>
 
 </html>

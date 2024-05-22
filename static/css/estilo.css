@@ -23,6 +23,24 @@ html{
 }
 
 
+@keyframes display-rotation {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity:1
+    }
+    50% {
+        opacity: 0;
+    }
+    75%{
+        opacity: 0;
+    }
+    100% {
+    opacity: 0;
+    }
+}
+
 
 
 body {
@@ -160,6 +178,7 @@ header {
     padding: 0.5rem;
     margin: 0.5rem;
     justify-self: center;
+
 }
 .form-control {
     padding: 0.25rem;
@@ -168,6 +187,7 @@ header {
 .form-wrapper {
     justify-content: center;
 }
+
 .icono-social-network {
     display: flex;
     max-width: 20px;
@@ -264,6 +284,7 @@ main {
     color: var(--rosado);
 }
 
+
 .navegacion {
     height: auto;
     display: flex;
@@ -273,9 +294,50 @@ main {
 }
 
 
+.navegacion {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.logo-display {
+    max-height:100px;
+    padding:0;
+}
 /* Estilos del Main*/
+.logo-service{
+    opacity: 0;
+    position: absolute;
+    margin: auto;
+}
+.contenedor-servicios {
+display: flex;
+justify-content: center;
+justify-items: center;
+padding: 50px;
+}
+.logo-service{
+    animation: display-rotation 8s infinite alternate;
+}
+.logo-service:nth-child(1){
+ animation-delay: 2s;
+}
+.logo-service:nth-child(2){
+ animation-delay: 3s;
+}
+.logo-service:nth-child(3){
+ animation-delay: 6s;
+}
+.logo-service:nth-child(4){
+ animation-delay: 8s;
+}
 
-
+.contenedor-service-display {
+    justify-content: center;
+    justify-items: center;
+}
 .tecnologias {
     margin: auto 5;
     font: var(--tituloPagina);

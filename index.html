@@ -3,60 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grafas Analytics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./static/css/estilo.css">
     <title>GRAFAS ANALYTICS</title>
 </head>
 
 <body>
     <header>
-        <nav>
-            <!-- logo -->
-            <div class="contenedor contenedor-header barra-nav-container navegacion">
-                <nav class="navegacion">
-                    <li><a class="nav-menu-item" href="./index.html">Inicio</a></li>
-                    <li><a class="nav-menu-item" href="./aboutus.html">Quienes somos</a></li>
-                    <li><a id="logo-nav" href="./index.html"><img class="logo-nav" src="./static/img/drawing.svg" class="nav-menu-item" alt=""></a></li>
-                    <li><a class="nav-menu-item" href="./servicios.html">Servicios</a></li>
-                    <li><a class="nav-menu-item" href="#">Contacto</a></li>
-                </nav>
-            </div>
-        </nav>
+        <div class="logo">
+            <center><a href="./index.html" class ="link-logo"><img class="logo-div" src="./static/img/drawing.svg" alt="Grafas Analytics"></a></center>
+            <nav class="navegacion">
+                <li><a class="nav-menu-item" href="./index.html">Inicio</a></li>
+                <li><a class="nav-menu-item" href="./aboutus.html">Quienes somos</a></li>
+                <li class="invisible"><a id="nav-menu-item logo-nav" href="./index.html"><img class="logo-nav" src="./static/img/drawing.svg" class="nav-menu-item" alt=""></a></li>
+                <li><a class="nav-menu-item" href="./servicios.html">Servicios</a></li>
+                <li><a class="nav-menu-item" href="./contacto.html">Contacto</a></li>
+            </nav>
+        </div>
+            
     </header>
     <!-- Contenido -->
     <div class="fondo-container">
-        <img class="fondo" src="static/img/img-principal.jpg" Imagen de fondo">
+        <img class="fondo" src="static/img/img-principal.jpg" alt="Imagen de análisis de datos, hojas de gráficos">
     </div>
  <section class ="cuerpo-principal">
     <main>
-        <!-- banner:una seccion prominente en la parte superior de una pagina que puede contener informacion destacada, como anuncios,mensajes importantes, o un diseño grafico distintivo. -->
         <section id="banner">
             <div class="tecnologias" id="tecnologias">
-                <h3 class="seccion" id="seccion">NUESTROS SERVICIOS</h3>
-                <p>En <b>Grafas Analytics</b> ofrecemos una amplia gama de servicios diseñados para satisfacer las
+                <h3 class="seccion" id="seccion">GRAFAS ANALYTICS</h3>
+                <p>En <b>GRAFAS ANALYTICS</b> ofrecemos una amplia gama de servicios diseñados para satisfacer las
                     necesidades
                     específicas de cada cliente. <br>Algunos de nuestros servicios incluyen:</p>
             </div>
         </section>
-        <!-- search: para implementar una barra de busqueda en la pagina web -->
-        <section id="search">
-        <h2>¿Qué estas buscando para ver?</h2>
-        </section>
-        <!-- popular: mostrar imagenes de las peliculas con tendencia hoy -->
-        <section id="popular">
-            <!-- division contenedora del titulo e imagenes -->
-         <div>
-            <h2>Tendencias de hoy</h2>
-            <div id="list-popular"></div>
+        <section id="banner">
+         <div class ="tecnologias dos">
+            <p>Parsing, minado y análisis cuantitativo y cualitativo<br>
+                Servicios de análsis de datos ajustados a sus necesidades</p>
          </div>
-        </section>
-        <!-- top-rated: mostrar las peliculas mas aclamadas -->
-        <section id="top-rated">
-            <!-- division contenedora del titulo e imagenes -->
-          <div>
-            <h2>Las mas aclamadas</h2>
-            <div id="list-top-rated"></div>
-          </div>
         </section>
     </main>
 </section> 
