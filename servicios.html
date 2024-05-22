@@ -5,86 +5,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./static/css/estilo.css">
-    <title>Quiénes Somos</title>
-
-
+    <title>GRAFAS ANALYTICS - Servicios </title>
 </head>
 
 <body>
     <header>
-        <div class="logo">
-            <center><img class="logo-div" src="./static/img/drawing.svg" alt="Grafas Analytics"></center>
+        <div>
+            <center class ="logo"><a href="./index.html" class ="link-logo"><img class="logo-div" src="./static/img/drawing.svg" alt="Grafas Analytics"></a></center>
             <nav class="navegacion">
                 <li><a class="nav-menu-item" href="./index.html">Inicio</a></li>
                 <li><a class="nav-menu-item" href="./aboutus.html">Quienes somos</a></li>
-                <!-- <a id="nav-menu-item logo-nav" href="./index.html"><img class="logo-nav" src="./static/img/drawing.svg" class="nav-menu-item" alt=""></a> -->
+                <li class="invisible"><a id="nav-menu-item logo-nav" href="./index.html"><img class="logo-nav" src="./static/img/drawing.svg" class="nav-menu-item" alt=""></a></li>
                 <li><a class="nav-menu-item" href="./servicios.html">Servicios</a></li>
                 <li><a class="nav-menu-item" href="./contacto.html">Contacto</a></li>
             </nav>
         </div>
-            
     </header>
-    <div class="fondo-container">
-        <img class="fondo" src="static/img/img-principal.jpg" Imagen de fondo">
+
+    <section class="form-wrapper contenedor-service-display" id="form-wrapper">
+        <h2>NUESTROS SERVICIOS</h2>
+        <div class="contenedor contenedor-imagenes contenedor-servicios">
+            
+            <div class="logo-service service-display logo-display">
+                <img class="servicios logo-display" src="./static/img/drawing.svg" alt="Servicio Basico">
+            </div>
+            <div class="logo-service service-display">
+                <img class="servicios" src="./static/img/icons-basico.png" alt="Servicio Basico">
+                <p>BASIC</p>
+            </div>
+    
+            <div class="logo-service service-display">
+                <img class="servicios" src="./static/img/icons-estandar.png" alt="Servicio Standard">
+                <p>STANDARD</p>
+            </div>
+    
+            <div class="logo-service service-display">
+                <img class="servicios" src="./static/img/icons-premium.png" alt="Servicio Premium">
+                <p>PREMIUM</p>
+            </div>
+        </div>
+        <h6>No dude en contactarnos</h6>
+
+        
+
+        <script src="./static/script/form-validation.js"></script>
+    </section>
+
+    <div class="otros-medcont">
+        <h2>Más formas de conectarse</h2>
+        <h4>Suscríbete a nnuestro boletín de noticias</h4>
+        <p>Nuestro  boletín de noticias te mantendrá informado sobre las últimas tendencias</p>
+        <h4>Síguenos en las redes sociales</h4>
+
+        <div class = "container-social-network">
+            <a class ="container-icon-social-network" href="https://facebook.com"><img class="icono-social-network" src="./static/img/facebook-logo.png" alt="logo facebook"></a>
+            <a class ="container-icon-social-network" href="https://instagram.com"><img class="icono-social-network" src="./static/img/instagram-logo.png" alt="logo facebook"></a>
+            <a class ="container-icon-social-network" href="https://linkedin.com"><img class="icono-social-network" src="./static/img/linkedin-logo.png" alt="logo facebook"></a>
+            <a class ="container-icon-social-network" href="https://twitter.com"><img class="icono-social-network" src="./static/img/x-logo.png" alt="logo facebook"></a>
+        </div>
+
+        <h4>Explore las últimas noticias</h4>
+        <p>Manténgase al día con las últimas noticias de GRAFAS ANALYTICS <br>y entérense de cómo estamos construyendo un mejor mundo de negocios.</p>
     </div>
-<section class ="cuerpo-principal">
-    <main>
-            <div>
-                <div class="tecnologias" id="tecnologias">
-                    <h3 class="seccion" id="seccion">NUESTROS SERVICIOS</h3>
-                    <p>Somos un equipo de profesionales de las Ciencias de la Información, abocados a la creación de resolución de problemas a medida de nuestros clientes <br>Algunos de nuestros servicios incluyen:</p>
-                </div>
-                <div>
-                    <div class="contenedor contenedor-imagenes">
-
-                        <div class="logo-service">
-                            <img class="servicios" src="./static/img/icons-basico.png" alt="Servicio Basico">
-                            <p>BASIC</p>
-                        </div>
-
-                        <div class="logo-service">
-                            <img class="servicios" src="./static/img/icons-estandar.png" alt="Servicio Standard">
-                            <p>STANDARD</p>
-                        </div>
-
-                        <div class="logo-service">
-                            <img class="servicios" src="./static/img/icons-premium.png" alt="Servicio Premium">
-                            <p>PREMIUM</p>
-                        </div>
-                    </div>
-                    <div>
-                        <form class="contacto" id="contacto">
-                            <legend class="titulo">Contacto</legend>
-                            <div>
-                                <label>Nombre</label>
-                                <input type="text name" value="">
-                            </div>
-
-                            <div>
-                                <label>Mail</label>
-                                <input type="text mail" value="">
-                            </div>
-
-                            <div>
-                                <label>Asunto</label>
-                                <input type="text subject" value="">
-                            </div>
-
-                            <div>
-                                <label>Mensaje</label>
-                                <textarea class ="message-text"rows="6"></textarea>
-                            </div>
-
-                            <div>
-                                <input type="submit" value="Enviar Mensaje">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>   
-</main>
-</section>
+    <section class="comments"">
+        <h4>Comentarios sobre nuestros servicios</h4>
+        <div class="comment-container"></div>
+    </section>
 </body>
 
 </html>
