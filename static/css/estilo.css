@@ -97,16 +97,19 @@ a{
 }
 
 aside {
-    border-style: dotted;
     height: 100% fit-content;
     width: 100% fit-content;
     align-self: center;
     justify-self: center;
 }
 aside img {
-    border-style: dotted;
     height: auto;
     width: auto;
+}
+#banner {
+    position: inherit;
+    height:100%;
+    display: grid;
 }
 body {
     position: relative;
@@ -118,7 +121,10 @@ body {
     color: white;
 }
 
-
+.blank-space{
+    display: block;
+    height:150px;
+}
 .navegacion a {
     display: flex;
     color: white;
@@ -355,7 +361,6 @@ main {
 
 .logo-nav-item {
     display: flex;
-    border-style: dotted;
     border-color: red;
     max-height: 50px;
     justify-content: center;
@@ -469,8 +474,17 @@ width: 100%;
     font-size: 1.5rem;
 }
 
+.dos {
+    display: flex;
+    height: 60vh;
+    padding:10%;
+    align-items: center;
+}
+
 .dos p{
     font-size: 1.25rem;
+    padding:10%;
+    height: 100%;
 }
 
 .objeto-carrousel {
