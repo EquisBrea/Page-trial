@@ -612,9 +612,6 @@ border-color: var(--azulSemiOpaco);
     grid-auto-flow:initial;
    }
 
-   /* .contenedor-en-form-contacto {
-    flex-direction: row;
-   } */
    .nav-menu-item {
     display: flex;
     height: auto;
