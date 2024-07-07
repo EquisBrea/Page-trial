@@ -3,7 +3,7 @@ const styleGeneral = getComputedStyle(root);
 const colorExito = styleGeneral.getPropertyValue('--verdeclaro');
 const rojoError =styleGeneral.getPropertyValue('--rojoerror');
 
-const formRegister=document.getElementById("formContacto")
+const formRegister=document.getElementById("form-contactos-recibidos")
 const inputNombre=document.getElementById("nombre");
 const inputApellido=document.getElementById("apellido");
 const inputEmail=document.getElementById("email");

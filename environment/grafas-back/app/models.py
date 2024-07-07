@@ -1,11 +1,13 @@
 from app.database import get_db
+from datetime import datetime
+
 
 class Contact:
-    def __init__(self, id=None, apellido=None, nombre=None, mail=None, comentario=None):
+    def __init__(self, id=None, apellido=None, nombre=None, email=None, comentario=None):
         self.id = id
         self.apellido = apellido
         self.nombre = nombre
-        self.mail = mail
+        self.email = email
         self.comentario = comentario
 
         
@@ -15,7 +17,7 @@ class Contact:
         cursor = db.cursor()
         cursor.execute("SELECT * FROM users")
         rows = cursor.fetchall()
-        contacts = [Contact(id=row[0], apellido=row[1], nombre=row[2], mail=row[3], comentario=row[4]) for row in rows]
+        contacts = [Contact(id=row[0], apellido=row[1], nombre=row[2], email=row[3], comentario=row[4]) for row in rows]
         cursor.close()
         return contacts
 
@@ -27,7 +29,7 @@ class Contact:
         row = cursor.fetchone()
         cursor.close()
         if row:
-            return Contact(id=row[0], apellido=row[1], nombre=row[2], mail=row[3], comentario=row[4])
+            return Contact(id=row[0], apellido=row[1], nombre=row[2], email=row[3], comentario=row[4])
         return None
     
     def save(self):
@@ -35,13 +37,13 @@ class Contact:
         cursor = db.cursor()
         if self.id:
             cursor.execute("""
-                UPDATE users SET apellido = %s, nombre = %s, mail = %s, comentario = %s
+                UPDATE users SET apellido = %s, nombre = %s, email = %s, comentario = %s
                 WHERE id = %s
-            """, (self.apellido, self.nombre, self.mail, self.comentario, self.id))
+            """, (self.apellido, self.nombre, self.email, self.comentario, self.id))
         else:
             cursor.execute("""
-                INSERT INTO users (apellido, nombre, mail, comentario) VALUES (%s, %s, %s, %s)
-            """, (self.apellido, self.nombre, self.mail, self.comentario))
+                INSERT INTO users (apellido, nombre, email, comentario) VALUES (%s, %s, %s, %s)
+            """, (self.apellido, self.nombre, self.email, self.comentario))
             self.id = cursor.lastrowid
 
         db.commit()
@@ -59,6 +61,6 @@ class Contact:
             'id': self.id,
             'apellido': self.apellido,
             'nombre': self.nombre,
-            'mail': self.mail,
+            'email': self.email,
             'comentario': self.comentario,
             }

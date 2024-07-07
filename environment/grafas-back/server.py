@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
 from app.database import init_app
-from app.views import *
+from app.views import index, create_contact, get_all_contacts, get_contact, update_contact,delete_contact
 
 app = Flask (__name__)
 

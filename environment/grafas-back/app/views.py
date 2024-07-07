@@ -20,7 +20,7 @@ def get_contact(id):
 def create_contact():
     data = request.json
     new_contact = Contact(apellido=data['apellido'], nombre=data['nombre'],
-                          mail=data['mail'], comentario=data['comentario'])
+                          email=data['email'], comentario=data['comentario'])
     new_contact.save()
     return jsonify({'message': 'Contact created successfully'}), 201
 
@@ -34,7 +34,7 @@ def update_contact(id):
     
     contact.appellido = data['apellido']
     contact.nombre = data['nombre']
-    contact.mail = data['mail']
+    contact.email = data['email']
     contact.comentario = data['comentario']
     
     contact.save()

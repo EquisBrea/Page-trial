@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CaC-Movies</title>
+    <title>Grafas Analytics - Administración de consultas</title>
     <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,14 +66,14 @@
                     </div>
                     
                     <div class="form-control d-flex-column">
-                        <label for="mail">Correo Electrónico</label>
-                        <input type="email" class="input-search" name="mail" id="mail">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" class="input-search" name="email" id="email">
                     </div>
                     <div class="form-control d-flex-column">
                         <label for="comentario">Comentario</label>
                         <input type="text" class="input-search" name="comentario" id="comentario">
                     </div> 
-                        <input type=""  name="id-contact" id="id-contact">
+                        <input type="hidden"  name="id-contact" id="id-contact">
                     <button class="btn-save-contact" type="button" id="btn-save-contact">Agregar</button>
                 </div>
             </form> 
@@ -87,8 +87,8 @@
                         <th>Nombre</th>
                         <th>Correo Electrónico</th>
                         <th>Comentario</th>
-                        <th>Fecha</th>
-                        <th>Leido</th>
+                        <!-- <th>Fecha</th>
+                        <th>Leido</th> -->
                         <th>Acciones</th>
                     </tr>
                 </thead>

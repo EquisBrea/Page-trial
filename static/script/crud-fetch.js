@@ -1,4 +1,5 @@
-const BASEURL = 'http://127.0.0.1:5000';
+// const BASEURL = 'http://127.0.0.1:5000';
+const BASEURL = 'https://EquisBrea.pythonanywhere.com'
 /**
 * Función para realizar una petición fetch con JSON.
 * @param {string} url - La URL a la que se realizará la petición.
@@ -39,7 +40,7 @@ async function showContacts() {
             `<tr>
         <td>${contact.apellido}</td>
         <td>${contact.nombre}</td>
-        <td>${contact.mail}</td>
+        <td>${contact.email}</td>
         <td>${contact.comentario}</td>
         <td>
             <button class="btn-cac" onclick='updateContact(${contact.id})'><i class="fa fa-pencil" ></button></i>
@@ -51,14 +52,17 @@ async function showContacts() {
 }
 
 async function saveContact() {
+    
+    const tableContacts = document.querySelector('#list-table-contacts tbody');
+    
     const id = document.querySelector('#id-contact').value;
     const apellido = document.querySelector('#apellido').value;
     const nombre = document.querySelector('#nombre').value;
-    const mail = document.querySelector('#mail').value;
+    const email = document.querySelector('#email').value;
     const comentario = document.querySelector('#comentario').value;
     //VALIDACION DE FORMULARIO
 
-    if (!apellido || !nombre || !mail || !comentario) {
+    if (!apellido || !nombre || !email || !comentario) {
         Swal.fire({
             title: 'Error!',
             text: 'Por favor completa todos los campos.',
@@ -72,7 +76,7 @@ async function saveContact() {
     const contactData = {
         apellido: apellido,
         nombre: nombre,
-        mail: mail,
+        email: email,
         comentario: comentario,
     };
 
@@ -86,7 +90,7 @@ async function saveContact() {
         }).then(async (result) => {
             if (result.isConfirmed) {
                 result = await fetchData(`${BASEURL}/api/contacts/${id}`, 'PUT', contactData);
-                showContacts();
+                tableContacts && showContacts();
                 Swal.fire(result.message,"", "success");
             } 
         });
@@ -104,7 +108,7 @@ async function saveContact() {
         icon: 'success',
         confirmButtonText: 'Cerrar'
     })
-    showContacts();
+    tableContacts && showContacts();
 }
 
 /**
@@ -113,6 +117,7 @@ async function saveContact() {
 * @param {number} id posición del array que se va a eliminar
 */
 function deleteContact(id) {
+    const tableContacts = document.querySelector('#list-table-contacts tbody');
     Swal.fire({
         title: `Esta seguro de eliminar el contacto número ${id}?`,
         showCancelButton: true,
@@ -120,7 +125,7 @@ function deleteContact(id) {
     }).then(async (result) => {
         if (result.isConfirmed) {
             let response = await fetchData(`${BASEURL}/api/contacts/${id}`,'DELETE');
-            showContacts();
+            tableContacts && showContacts();
             Swal.fire(response.message,"", "success");
         }
     });
@@ -139,21 +144,29 @@ async function updateContact(contact_id) {
     const idContact = document.querySelector("#id-contact");
     const apellido = document.querySelector('#apellido');
     const nombre = document.querySelector('#nombre');
-    const mail = document.querySelector('#mail');
+    const email = document.querySelector('#email');
     const comentario = document.querySelector('#comentario');
 
     idContact.value = response.id;
     apellido.value = response.apellido;
     nombre.value = response.nombre;
-    mail.value = response.mail;
+    email.value = response.email;
     comentario.value = response.comentario;
     
 
 }
-
+async function showWarning () {
+    Swal.fire({
+        title: `Esta seguro de eliminar el contacto número ${id}?`,
+        showCancelButton: true,
+        confirmButtonText: "Eliminar",
+    })
+}
 document.addEventListener('DOMContentLoaded', function () {
+    const tableContacts = document.querySelector('#list-table-contacts tbody');
     const btnSaveContact = document.querySelector('#btn-save-contact');
     //ASOCIAR UNA FUNCION AL EVENTO CLICK DEL BOTON
+    btnSaveContact.addEventListener('click', showWarning);
     btnSaveContact.addEventListener('click', saveContact);
-    showContacts();
+    tableContacts && showContacts();
 });
