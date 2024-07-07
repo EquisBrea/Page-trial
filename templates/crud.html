@@ -29,40 +29,26 @@
 <body >
     <!-- Agregar comentario -->
     <!-- INDICAR LA CABECERA -->
-    <header class="header">
-        <!-- indica que un menu de navegacion -->
-        <nav>
-            <!-- para realizar divisiones de contenido -->
-            <div id="logo">
-                <a href="">
-                    <i class="fas fa-film"></i>
-                    <span class="logo-text">
-                        CAC MOVIES
-                    </span>
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li>
-                    <!-- etiqueta enlace - enlace interno al documento html -->
-                    <a href="#popular" >Tendencias</a>
-                </li>
-                <li>
-                    <!-- etiqueta enlace interno al proyecto -->
-                    <a href="./register.html">Registrarse</a>
-                </li>
-                <li>
-                    <!-- Enlace externo -->
-                    <a href="#" target="_blank" class="btn-cac">
-                        <i class="fas fa-sign-in-alt"></i>
-                        <span class="login-text">
-                            Iniciar sesión
-                        </span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+    <header>
+        <div class="logo">
+            <center><a href="./index.html" class="link-logo"><img class="logo-div" src="./static/img/drawing.svg"
+                        alt="Grafas Analytics"></a></center>
+            <nav class="navegacion">
+                <li><a class="nav-menu-item" href="./index.html">Inicio</a></li>
+                <li><a class="nav-menu-item" href="./aboutus.html">Quienes somos</a></li>
+                <li class="invisible"><a id="nav-menu-item logo-nav" href="./index.html"><img class="logo-nav"
+                            src="./static/img/drawing.svg" class="nav-menu-item" alt=""></a></li>
+                <li><a class="nav-menu-item" href="./servicios.html">Servicios</a></li>
+                <li><a class="nav-menu-item" href="./contacto.html">Contacto</a></li>
+                <li><a class="nav-menu-item" href="./templates/crud.html">CRUD</a></li>
+            </nav>
+        </div>
 
     </header>
+    <!-- Contenido -->
+    <div class="fondo-container">
+        <img class="fondo" src="static/img/img-principal-2.jpg" alt="Imagen de análisis de datos, hojas de gráficos">
+    </div>
     <!-- Indicar contenido principal de la pagina -->
     <main> 
         <section id="form-contactos" class="container ">
