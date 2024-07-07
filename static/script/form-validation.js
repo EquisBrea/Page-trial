@@ -20,7 +20,7 @@ const errorTerminos=document.getElementById("error-terms");
 const errorText =document.querySelector(".error");
 
 const errorTemplate ="Error - "
-window.alert("Hola");
+//window.alert("Hola");
 
 formRegister.addEventListener("submit" , e=>{
     e.preventDefault();

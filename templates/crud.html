@@ -65,46 +65,48 @@
     </header>
     <!-- Indicar contenido principal de la pagina -->
     <main> 
-        <section id="form" class="container ">
-            <h2 class="search-title">Gestión de peliculas</h2>
+        <section id="form-contactos" class="container ">
+            <h2 class="search-title">Gestión de contactos recibidos</h2>
             <p class="description" >En esta sección se podra llevar a cabo la gestión de las peliculas del portal</p>
-            <form action="#"  id="form-movie">
+            <form action="#"  id="form-contactos-recibidos">
                 <div class="d-flex">
                     <div class="form-control d-flex-column">
-                        <label for="title">Título</label>
-                        <input type="text" class="input-search" name="title" id="title">
+                        <label for="apellido">Apelllido</label>
+                        <input type="text" class="input-search" name="apellido" id="apellido">
                     </div>
                     <div class="form-control d-flex-column">
-                        <label for="director">Director</label>
-                        <input type="text" class="input-search" name="director" id="director">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="input-search" name="nombre" id="nombre">
                     </div>
                     
                     <div class="form-control d-flex-column">
-                        <label for="release-date">Fecha Lanzamiento</label>
-                        <input type="date" class="input-search" name="release_date" id="release-date">
+                        <label for="mail">Correo Electrónico</label>
+                        <input type="email" class="input-search" name="mail" id="mail">
                     </div>
                     <div class="form-control d-flex-column">
-                        <label for="banner">Banner</label>
-                        <input type="url" class="input-search" name="banner" id="banner-form">
-                    </div>                
-                    <input type="hidden"  name="id" id="id-movie">
-                    <button class="btn-cac" type="button" id="btn-save-movie">Agregar</button>
+                        <label for="comentario">Comentario</label>
+                        <input type="text" class="input-search" name="comentario" id="comentario">
+                    </div> 
+                        <input type=""  name="id-contact" id="id-contact">
+                    <button class="btn-save-contact" type="button" id="btn-save-contact">Agregar</button>
                 </div>
             </form> 
         </section>
         <section id="list" class="container">
             <h3 class="subtitle">Listado de peliculas</h3>
-            <table id="list-table-movies" class="table">
+            <table id="list-table-contacts" class="table">
                 <thead>
                     <tr>
-                        <th>Titulo</th>
-                        <th>Director</th>
-                        <th>Fecha de lanzamiento</th>
-                        <th>Banner</th>
+                        <th>Apellido</th>
+                        <th>Nombre</th>
+                        <th>Correo Electrónico</th>
+                        <th>Comentario</th>
+                        <th>Fecha</th>
+                        <th>Leido</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
-                <tbody id="tbody-table-movies">
+                <tbody id="tbody-table-contacts">
                     
                 </tbody>
             </table>
@@ -115,7 +117,7 @@
         <a href="">Términos y condiciones</a>
         <a href="">Preguntas Frecuentes</a>
         <a href="">Ayuda</a>
-        <a href="./crud-movies.html">CRUD Movies</a>
+        <a href="./crud.html">CRUD Movies</a>
     </footer>
 
     <!-- INTERNO AL DOCUMENTO -->
@@ -128,7 +130,7 @@
     <!-- <script src="./static/js/index.js"></script> -->
     <!-- <script src="./static/js/funciones.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../static/js/crud-movies-fetch.js"></script>
+    <script src="/static/script/crud-fetch.js"></script>
     <script src="../static/js/index.js"></script>
 </body>
 
